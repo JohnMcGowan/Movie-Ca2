@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CA2S00092756RAD1", "CA2S00092756RAD1\CA2S00092756RAD1.csproj", "{617E8C7F-339C-4552-9A8C-F9982DB49018}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{617E8C7F-339C-4552-9A8C-F9982DB49018}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{617E8C7F-339C-4552-9A8C-F9982DB49018}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{617E8C7F-339C-4552-9A8C-F9982DB49018}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{617E8C7F-339C-4552-9A8C-F9982DB49018}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

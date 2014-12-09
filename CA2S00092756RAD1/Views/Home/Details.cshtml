@@ -1,0 +1,88 @@
+﻿@model CA2S00092756RAD1.Models.Movies
+@{
+    ViewBag.Title = "Movie";
+}
+
+<h2>Movie</h2>
+
+<div>
+    <hr />
+    <ul class="list-group alert-info" style="float:left; width:15%;">
+        <li class="list-group-item list-group-item-info alert-info">@Html.DisplayNameFor(model => model.Title)</li>
+        <li class="list-group-item list-group-item-info alert-info">@Html.DisplayNameFor(model => model.RunTime)</li>
+        <li class="list-group-item list-group-item-info alert-info">@Html.DisplayNameFor(model => model.MovieType)</li>
+    </ul>
+    <div class="list-group alert-info" style="margin-left:15%">
+        <a class="list-group-item list-group-item-info alert-info">@Html.DisplayFor(model => model.Title)</a>
+        <a class="list-group-item list-group-item-info alert-info">@Html.DisplayFor(model => model.RunTime)</a>
+        <a class="list-group-item list-group-item-info alert-info">@Html.DisplayFor(model => model.MovieType)</a>
+    </div>
+    @*<dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RunTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RunTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MovieType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MovieType)
+        </dd>
+    </dl>*@
+    <div class="panel panel-default alert-info">
+        <div class="panel-heading alert-info" style="font-size:x-large">Staring</div>
+            
+            @if (Model.actors.Any())
+            {
+                <table class="table table-condensed table-striped alert-info" >
+                    <tr>
+
+                        <th>
+                            @Html.DisplayNameFor(model => model.actors.First().FirstName)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.actors.First().Surname)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.actors.First().ScreenName.First().screenName)
+                        </th>
+                    </tr>
+                    @if (Model != null)
+                    {
+                        foreach (var item in Model.actors)
+                        {
+                            <tr>
+                                <th>
+                                    @Html.DisplayFor(modelItem => item.FirstName)
+                                </th>
+                                <th>
+                                    @Html.DisplayFor(modelItem => item.Surname)
+                                </th>
+                                <th>
+                                    @Html.DisplayFor(modelItem => item.ScreenName.First().screenName)
+                                </th>
+                            </tr>
+                        }
+                    }
+
+                </table>
+            }
+        </div>
+    </div>
+        <p>
+            <button type="button" class="btn btn-info">@Html.ActionLink("Edit", "Edit", new { id = Model.MovieID })</button> |
+            <button type="button" class="btn btn-info">@Html.ActionLink("Back to List", "Index")</button>
+        </p>
